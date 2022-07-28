@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1 class="header__title">ToDo list</h1>
+            <h2 class="header__descr">выполнено 0, не выполнено 0</h2>
+        </div>
+
+        <form class="form" id="form">
+            <input type="text" placeholder="Добавьте задачу" class="form__post-label" id="taskInput"/>
+            <button type="submit" class="btn btn-submit">Добавить</button>
+        </form>
+
+        <div class="action" id="action">
+            <p class="action__text">Отменить:</p>                
+            <button type="button" class="btn btn-notdone" id="allnotdone">Все не выполнены</button>
+            <button type="button" class="btn btn-done" id="alldone">Все выполнены</button>
+            <button type="button" class="btn btn-delete" id="alldelete">Удалить выполненные
+                <i class="fa fa-trash-o"></i>
+            </button>
+            <select class="action__filter" id="action__filter"> 
+                <option value="all" selected="selected">Отображать все</option>
+                <option value="done">Только выполненные</option> 
+                <option value="notdone">Только невыполненные</option>
+            </select>
+        </div>
+
+        <ul class="list__inner" id="taskList">           
+            <!-- doto list -->
+            <li></li>
+        </ul>
+
+        <div class="pagination">            
+            <a href="javascript:prevPage()" id="btn_prev" class="pagination__item">Prev</a>
+            <div class="pagination__text">Страница: <span id="page" class="pagination__text"></span></div>
+            <a href="javascript:nextPage()" id="btn_next" class="pagination__item">Next</a>            
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/2aa76caa57.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
